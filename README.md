@@ -4,7 +4,7 @@ An end-to-end machine learning project predicting which areas of New York City a
 
 ---
 
-## Project Structure
+## Project Structure 
 
 ```
 nyc_urban_development/
