@@ -1,0 +1,497 @@
+name,line,borough,latitude,longitude
+Times Sq-42 St,Broadway - 7Av,M,40.75529,-73.987495
+Annadale,Staten Island,SI,40.54046,-74.178217
+Franklin Av,Franklin Shuttle,Bk,40.680596,-73.955827
+Junius St,Eastern Pky,Bk,40.663515,-73.902447
+Middle Village-Metropolitan Av,Myrtle Av,Q,40.711396,-73.889601
+34 St-Hudson Yards,Flushing,M,40.755882,-74.00191
+52 St,Flushing,Q,40.744149,-73.912549
+E 149 St,Pelham,Bx,40.812118,-73.904098
+Myrtle Av,Jamaica,Bk,40.697207,-73.935657
+East Broadway,6th Av - Culver,M,40.713715,-73.990173
+Avenue N,6th Av - Culver,Bk,40.61514,-73.974197
+Hoyt St,Eastern Pky,Bk,40.690545,-73.985065
+Forest Av,Myrtle Av,Q,40.704423,-73.903077
+Tompkinsville,Staten Island,SI,40.636949,-74.074835
+77 St,4th Av,Bk,40.629742,-74.02551
+Chambers St,8th Av - Fulton St,M,40.714111,-74.008585
+Westchester Sq-E Tremont Av,Pelham,Bx,40.839892,-73.842952
+170 St,Concourse,Bx,40.839306,-73.9134
+59 St,Lexington Av,M,40.762526,-73.967967
+Prospect Av,Lenox - White Plains Rd,Bx,40.819585,-73.90177
+Neptune Av,6th Av - Culver,Bk,40.581011,-73.974574
+Avenue U,Sea Beach,Bk,40.597473,-73.979137
+Morrison Av-Soundview,Pelham,Bx,40.829521,-73.874516
+Bay Pkwy,6th Av - Culver,Bk,40.620769,-73.975264
+5 Av/59 St,Astoria,M,40.764811,-73.973347
+25 Av,West End,Bk,40.597704,-73.986829
+116 St,Lexington Av,M,40.798629,-73.941617
+Beach 105 St,Rockaway,Q,40.583209,-73.827559
+Briarwood,Queens Blvd,Q,40.709179,-73.820574
+23 St,Broadway - Brighton,M,40.741303,-73.989344
+28 St,Broadway - Brighton,M,40.745494,-73.988691
+145 St,Broadway - 7Av,M,40.826551,-73.95036
+Dyckman St,8th Av - Fulton St,M,40.865491,-73.927271
+Marcy Av,Jamaica,Bk,40.708359,-73.957757
+Hunters Point Av,Flushing,Q,40.742216,-73.948916
+116 St,8th Av - Fulton St,M,40.805085,-73.954882
+Jay St-MetroTech,8th Av - Fulton St,Bk,40.692338,-73.987342
+45 St,4th Av,Bk,40.648939,-74.010006
+Liberty Av,8th Av - Fulton St,Bk,40.674542,-73.896548
+Classon Av,Crosstown,Bk,40.688873,-73.96007
+Cortelyou Rd,Broadway - Brighton,Bk,40.640927,-73.963891
+36 St,Queens Blvd,Q,40.752039,-73.928781
+Fulton St,Lexington Av,M,40.710368,-74.009509
+Bronx Park East,Lenox - White Plains Rd,Bx,40.848828,-73.868457
+Gun Hill Rd,Dyre Av,Bx,40.869526,-73.846384
+79 St,West End,Bk,40.613501,-74.00061
+Metropolitan Av,Crosstown,Bk,40.712792,-73.951418
+Queens Plaza,Queens Blvd,Q,40.748973,-73.937243
+Kingsbridge Rd,Jerome Av,Bx,40.86776,-73.897174
+Canal St,Broadway,M,40.719527,-74.001775
+191 St,Broadway - 7Av,M,40.855225,-73.929412
+67 Av,Queens Blvd,Q,40.726523,-73.852719
+Broadway Junction,8th Av - Fulton St,Bk,40.678334,-73.905316
+Astoria-Ditmars Blvd,Astoria,Q,40.775036,-73.912034
+Newkirk Av-Little Haiti,Nostrand,Bk,40.639967,-73.948411
+Jefferson St,Canarsie,Bk,40.706607,-73.922913
+Times Sq-42 St,Flushing,M,40.755477,-73.987691
+Dongan Hills,Staten Island,SI,40.588849,-74.09609
+Aqueduct Racetrack,Rockaway,Q,40.672097,-73.835919
+Cleveland St,Jamaica,Bk,40.679947,-73.884639
+86 St,8th Av - Fulton St,M,40.785868,-73.968916
+Grant Av,Liberty Av,Bk,40.677044,-73.86505
+65 St,Queens Blvd,Q,40.749669,-73.898453
+Avenue M,Broadway - Brighton,Bk,40.617618,-73.959399
+238 St,Broadway - 7Av,Bx,40.884667,-73.90087
+Eastern Pkwy-Brooklyn Museum,Eastern Pky,Bk,40.671987,-73.964375
+Bleecker St,Lexington Av,M,40.725915,-73.994659
+Beverley Rd,Broadway - Brighton,Bk,40.644031,-73.964492
+111 St,Flushing,Q,40.75173,-73.855334
+125 St,8th Av - Fulton St,M,40.811109,-73.952343
+23 St,6th Av - Culver,M,40.742878,-73.992821
+Wall St,Lexington Av,M,40.707557,-74.011862
+Kings Hwy,Sea Beach,Bk,40.603923,-73.980353
+137 St-City College,Broadway - 7Av,M,40.822008,-73.953676
+116 St,Lenox - White Plains Rd,M,40.802098,-73.949625
+Franklin St,Broadway - 7Av,M,40.719318,-74.006886
+176 St,Jerome Av,Bx,40.84848,-73.911794
+7 Av,Queens Blvd,M,40.762862,-73.981637
+174-175 Sts,Concourse,Bx,40.8459,-73.910136
+Canal St,Jamaica,M,40.718092,-73.999892
+Lorimer St,Canarsie,Bk,40.714063,-73.950275
+23 St,8th Av - Fulton St,M,40.745906,-73.998041
+Nostrand Av,8th Av - Fulton St,Bk,40.680438,-73.950426
+Fort Hamilton Pkwy,Sea Beach,Bk,40.631386,-74.005351
+Pelham Pkwy,Dyre Av,Bx,40.858985,-73.855359
+36 Av,Astoria,Q,40.756804,-73.929575
+Bedford Park Blvd,Concourse,Bx,40.873244,-73.887138
+3 Av-138 St,Pelham,Bx,40.810476,-73.926138
+Central Av,Myrtle Av,Bk,40.697857,-73.927397
+Sterling St,Nostrand,Bk,40.662742,-73.95085
+Smith-9 Sts,6th Av - Culver,Bk,40.67358,-73.995959
+Elder Av,Pelham,Bx,40.828584,-73.879159
+96 St,Second Av,M,40.784318,-73.947152
+Fulton St,Clark St,M,40.709416,-74.006571
+Stapleton,Staten Island,SI,40.627915,-74.075162
+Fresh Pond Rd,Myrtle Av,Q,40.706186,-73.895877
+163 St-Amsterdam Av,8th Av - Fulton St,M,40.836013,-73.939892
+DeKalb Av,Broadway - Brighton,Bk,40.690635,-73.981824
+28 St,Lexington Av,M,40.74307,-73.984264
+103 St,Broadway - 7Av,M,40.799446,-73.968379
+21 St-Queensbridge,63rd St,Q,40.754203,-73.942836
+Nereid Av,Lenox - White Plains Rd,Bx,40.898379,-73.854376
+104 St,Jamaica,Q,40.695178,-73.84433
+Atlantic Av,Canarsie,Bk,40.675345,-73.903097
+Jay St-MetroTech,Broadway,Bk,40.69218,-73.985942
+Nevins St,Eastern Pky,Bk,40.688246,-73.980492
+Sutter Av,Canarsie,Bk,40.669367,-73.901975
+Atlantic Av-Barclays Ctr,Broadway - Brighton,Bk,40.68446,-73.97689
+Zerega Av,Pelham,Bx,40.836488,-73.847036
+Church Av,6th Av - Culver,Bk,40.644041,-73.979678
+W 8 St-NY Aquarium,Broadway - Brighton,Bk,40.576127,-73.975939
+Avenue P,6th Av - Culver,Bk,40.608944,-73.973022
+161 St-Yankee Stadium,Jerome Av,Bx,40.827994,-73.925831
+Harlem-148 St,Lenox - White Plains Rd,M,40.82388,-73.93647
+14 St,Broadway - 7Av,M,40.737826,-74.000201
+Beach 44 St,Rockaway,Q,40.592943,-73.776013
+Intervale Av,Lenox - White Plains Rd,Bx,40.822181,-73.896736
+Wakefield-241 St,Lenox - White Plains Rd,Bx,40.903125,-73.85062
+Delancey St-Essex St,6th Av - Culver,M,40.718611,-73.988114
+111 St,Jamaica,Q,40.697418,-73.836345
+Jamaica-179 St,Queens Blvd,Q,40.712646,-73.783817
+Longwood Av,Pelham,Bx,40.816104,-73.896435
+Cathedral Pkwy (110 St),Broadway - 7Av,M,40.803967,-73.966847
+57 St-7 Av,Broadway - Brighton,M,40.764664,-73.980658
+Castle Hill Av,Pelham,Bx,40.834255,-73.851222
+Bay Pkwy,West End,Bk,40.601875,-73.993728
+110 St,Lexington Av,M,40.79502,-73.94425
+Wall St,Clark St,M,40.706821,-74.0091
+Beach 98 St,Rockaway,Q,40.585307,-73.820558
+49 St,Broadway - Brighton,M,40.759901,-73.984139
+155 St,Concourse,M,40.830135,-73.938209
+Huguenot,Staten Island,SI,40.533674,-74.191794
+Pennsylvania Av,Eastern Pky,Bk,40.664635,-73.894895
+46 St-Bliss St,Flushing,Q,40.743132,-73.918435
+E 180 St,Lenox - White Plains Rd,Bx,40.841894,-73.873488
+Burnside Av,Jerome Av,Bx,40.853453,-73.907684
+86 St,Second Av,M,40.777891,-73.951787
+5 Av/53 St,Queens Blvd,M,40.760167,-73.975224
+Broadway,Crosstown,Bk,40.706092,-73.950308
+59 St-Columbus Circle,8th Av - Fulton St,M,40.768296,-73.981736
+Cortlandt St,Broadway,M,40.710668,-74.011029
+Gun Hill Rd,Lenox - White Plains Rd,Bx,40.87785,-73.866256
+34 St-Penn Station,Broadway - 7Av,M,40.750373,-73.991057
+Neck Rd,Broadway - Brighton,Bk,40.595246,-73.955161
+Rockaway Blvd,Liberty Av,Q,40.680429,-73.843853
+Bay Ridge Av,4th Av,Bk,40.634967,-74.023377
+Coney Island-Stillwell Av,Sea Beach / West End / Culver / Brighton,Bk,40.577422,-73.981233
+68 St-Hunter College,Lexington Av,M,40.768141,-73.96387
+Northern Blvd,Queens Blvd,Q,40.752885,-73.906006
+Canarsie-Rockaway Pkwy,Canarsie,Bk,40.646654,-73.90185
+14 St,8th Av - Fulton St,M,40.740893,-74.00169
+Court Sq,Crosstown,Q,40.746554,-73.943832
+Grand Army Plaza,Eastern Pky,Bk,40.675235,-73.971046
+Kosciuszko St,Jamaica,Bk,40.693342,-73.928814
+14 St,6th Av - Culver,M,40.738228,-73.996209
+Knickerbocker Av,Myrtle Av,Bk,40.698664,-73.919711
+Brook Av,Pelham,Bx,40.807566,-73.91924
+Aqueduct-N Conduit Av,Rockaway,Q,40.668234,-73.834058
+Oakwood Heights,Staten Island,SI,40.56511,-74.12632
+72 St,Broadway - 7Av,M,40.778453,-73.98197
+71 St,West End,Bk,40.619589,-73.998864
+Crown Hts-Utica Av,Eastern Pky,Bk,40.668897,-73.932942
+82 St-Jackson Hts,Flushing,Q,40.747659,-73.883697
+Van Siclen Av,Jamaica,Bk,40.678024,-73.891688
+Graham Av,Canarsie,Bk,40.714565,-73.944053
+75 St-Elderts Ln,Jamaica,Q,40.691324,-73.867139
+Mets-Willets Point,Flushing,Q,40.754622,-73.845625
+Spring St,Lexington Av,M,40.722301,-73.997141
+57 St,6th Av - Culver,M,40.763972,-73.97745
+110 St-Malcolm X Plaza,Lenox - White Plains Rd,M,40.799075,-73.951822
+96 St,8th Av - Fulton St,M,40.791642,-73.964696
+36 St,4th Av,Bk,40.655144,-74.003549
+Sutphin Blvd,Queens Blvd,Q,40.70546,-73.810708
+Euclid Av,8th Av - Fulton St,Bk,40.675377,-73.872106
+Prince St,Broadway - Brighton,M,40.724329,-73.997702
+181 St,Broadway - 7Av,M,40.849505,-73.933596
+Old Town,Staten Island,SI,40.596612,-74.087368
+Canal St,8th Av - Fulton St,M,40.720824,-74.005229
+Inwood-207 St,8th Av - Fulton St,M,40.868072,-73.919899
+Avenue J,Broadway - Brighton,Bk,40.625039,-73.960803
+Beverly Rd,Nostrand,Bk,40.645098,-73.948959
+90 St-Elmhurst Av,Flushing,Q,40.748408,-73.876613
+Hewes St,Jamaica,Bk,40.70687,-73.953431
+Bedford Park Blvd-Lehman College,Jerome Av,Bx,40.873412,-73.890064
+14 St-Union Sq,Canarsie,M,40.734789,-73.99073
+Morgan Av,Canarsie,Bk,40.706152,-73.933147
+47-50 Sts-Rockefeller Ctr,6th Av - Culver,M,40.758663,-73.981329
+Court Sq,Flushing,Q,40.747023,-73.945264
+Canal St,Broadway - 7Av,M,40.722854,-74.006277
+104 St,Liberty Av,Q,40.681711,-73.837683
+Chambers St,Jamaica,M,40.713243,-74.003401
+3 Av,Canarsie,M,40.732849,-73.986122
+Kingsbridge Rd,Concourse,Bx,40.866978,-73.893509
+Kingston Av,Eastern Pky,Bk,40.669399,-73.942161
+Rector St,Broadway,M,40.70722,-74.013342
+Cypress Hills,Jamaica,Bk,40.689941,-73.87255
+High St,8th Av - Fulton St,Bk,40.699337,-73.990531
+Forest Hills-71 Av,Queens Blvd,Q,40.721691,-73.844521
+Wilson Av,Canarsie,Bk,40.688764,-73.904046
+Bedford-Nostrand Avs,Crosstown,Bk,40.689627,-73.953522
+Arthur Kill,Staten Island,SI,40.516578,-74.242096
+Livonia Av,Canarsie,Bk,40.664038,-73.900571
+18 St,Broadway - 7Av,M,40.74104,-73.997871
+Halsey St,Canarsie,Q,40.695602,-73.904084
+5 Av,Flushing,M,40.753821,-73.981963
+Carroll St,6th Av - Culver,Bk,40.680303,-73.995048
+President St-Medgar Evers College,Nostrand,Bk,40.667883,-73.950683
+Ditmas Av,6th Av - Culver,Bk,40.636119,-73.978172
+Kings Hwy,6th Av - Culver,Bk,40.603217,-73.972361
+149 St-Grand Concourse,Jerome Av,Bx,40.818375,-73.927351
+New Dorp,Staten Island,SI,40.57348,-74.11721
+Beach 60 St,Rockaway,Q,40.592374,-73.788522
+149 St-Grand Concourse,Lenox - White Plains Rd,Bx,40.81841,-73.926718
+Atlantic Av-Barclays Ctr,4th Av,Bk,40.683666,-73.97881
+Burke Av,Lenox - White Plains Rd,Bx,40.871356,-73.867164
+7 Av,Broadway - Brighton,Bk,40.67705,-73.972367
+Sheepshead Bay,Broadway - Brighton,Bk,40.586896,-73.954155
+9 Av,West End,Bk,40.646292,-73.994324
+W 4 St-Wash Sq,8th Av - Fulton St,M,40.732338,-74.000495
+Jamaica-Van Wyck,Queens - Archer,Q,40.702566,-73.816859
+21 St,Crosstown,Q,40.744065,-73.949724
+155 St,8th Av - Fulton St,M,40.830518,-73.941514
+167 St,Jerome Av,Bx,40.835537,-73.9214
+Van Cortlandt Park-242 St,Broadway - 7Av,Bx,40.889248,-73.898583
+50 St,8th Av - Fulton St,M,40.762456,-73.985984
+33 St,Lexington Av,M,40.746081,-73.982076
+79 St,Broadway - 7Av,M,40.783934,-73.979917
+Kingston-Throop Avs,8th Av - Fulton St,Bk,40.679921,-73.940858
+219 St,Lenox - White Plains Rd,Bx,40.883895,-73.862633
+Grand Av-Newtown,Queens Blvd,Q,40.737015,-73.877223
+New Utrecht Av,Sea Beach,Bk,40.624842,-73.996353
+145 St,8th Av - Fulton St,M,40.824783,-73.944216
+Broadway,Astoria,Q,40.76182,-73.925508
+Lafayette Av,8th Av - Fulton St,Bk,40.686113,-73.973946
+Avenue U,Broadway - Brighton,Bk,40.5993,-73.955929
+88 St,Liberty Av,Q,40.679843,-73.85147
+25 St,4th Av,Bk,40.660397,-73.998091
+46 St,Queens Blvd,Q,40.756312,-73.913333
+Fulton St,Crosstown,Bk,40.687119,-73.975375
+Canal St,Lexington Av,M,40.718803,-74.000193
+Borough Hall,Eastern Pky,Bk,40.692404,-73.990151
+116 St-Columbia University,Broadway - 7Av,M,40.807722,-73.96411
+Parkchester,Pelham,Bx,40.833226,-73.860816
+23 St-Baruch College,Lexington Av,M,40.739864,-73.986599
+Beach 67 St,Rockaway,Q,40.590927,-73.796924
+183 St,Jerome Av,Bx,40.858407,-73.903879
+Lexington Av/53 St,Queens Blvd,M,40.757552,-73.969055
+Prospect Park,Broadway - Brighton,Bk,40.661614,-73.962246
+28 St,Broadway - 7Av,M,40.747215,-73.993365
+City Hall,Broadway,M,40.713282,-74.006978
+75 Av,Queens Blvd,Q,40.718331,-73.837324
+18 Av,Sea Beach,Bk,40.620671,-73.990414
+Times Sq-42 St,Broadway - Brighton,M,40.754672,-73.986754
+168 St-Washington Hts,Broadway - 7Av,M,40.840556,-73.940133
+145 St,Lenox - White Plains Rd,M,40.820421,-73.936245
+181 St,8th Av - Fulton St,M,40.851695,-73.937969
+215 St,Broadway - 7Av,M,40.869444,-73.915279
+Gates Av,Jamaica,Bk,40.68963,-73.92227
+40 St-Lowery St,Flushing,Q,40.743781,-73.924016
+Bergen St,6th Av - Culver,Bk,40.686145,-73.990862
+Utica Av,8th Av - Fulton St,Bk,40.679364,-73.930729
+72 St,Second Av,M,40.768799,-73.958424
+Clark St,Clark St,Bk,40.697466,-73.993086
+72 St,8th Av - Fulton St,M,40.775594,-73.97641
+Shepherd Av,8th Av - Fulton St,Bk,40.67413,-73.88075
+59 St,4th Av,Bk,40.641362,-74.017881
+Fulton St,8th Av - Fulton St,M,40.710197,-74.007691
+Buhre Av,Pelham,Bx,40.84681,-73.832569
+161 St-Yankee Stadium,Concourse,Bx,40.827905,-73.925651
+77 St,Lexington Av,M,40.77362,-73.959874
+Avenue H,Broadway - Brighton,Bk,40.62927,-73.961639
+Rector St,Broadway - 7Av,M,40.707513,-74.013783
+39 Av-Dutch Kills,Astoria,Q,40.752882,-73.932755
+Broadway-Lafayette St,6th Av - Culver,M,40.725297,-73.996204
+Bay Terrace,Staten Island,SI,40.5564,-74.136907
+121 St,Jamaica,Q,40.700492,-73.828294
+Houston St,Broadway - 7Av,M,40.728251,-74.005367
+169 St,Queens Blvd,Q,40.71047,-73.793604
+18 Av,6th Av - Culver,Bk,40.629755,-73.976971
+Eastchester-Dyre Av,Dyre Av,Bx,40.8883,-73.830834
+Flushing Av,Crosstown,Bk,40.700377,-73.950234
+62 St,West End,Bk,40.626472,-73.996895
+Sutter Av-Rutland Rd,Eastern Pky,Bk,40.664717,-73.92261
+West Farms Sq-E Tremont Av,Lenox - White Plains Rd,Bx,40.840295,-73.880049
+103 St,Lexington Av,M,40.7906,-73.947478
+Beach 25 St,Rockaway,Q,40.600066,-73.761353
+Fulton St,Jamaica,M,40.710374,-74.007582
+8 St-NYU,Broadway - Brighton,M,40.730328,-73.992629
+Grand St,Canarsie,Bk,40.711926,-73.94067
+Times Sq-42 St,Lexington - Shuttle,M,40.755983,-73.986229
+Prince's Bay,Staten Island,SI,40.525507,-74.200064
+Van Siclen Av,Eastern Pky,Bk,40.665449,-73.889395
+Flushing-Main St,Flushing,Q,40.7596,-73.83003
+Botanic Garden,Franklin Shuttle,Bk,40.670343,-73.959245
+Fordham Rd,Concourse,Bx,40.861296,-73.897749
+Bergen St,Eastern Pky,Bk,40.680829,-73.975098
+Myrtle-Wyckoff Avs,Myrtle Av,Bk,40.69943,-73.912385
+66 St-Lincoln Center,Broadway - 7Av,M,40.77344,-73.982209
+7 Av,6th Av - Culver,Bk,40.666271,-73.980305
+Cypress Av,Pelham,Bx,40.805368,-73.914042
+103 St,8th Av - Fulton St,M,40.796092,-73.961454
+Howard Beach-JFK Airport,Rockaway,Q,40.660476,-73.830301
+Church Av,Nostrand,Bk,40.650843,-73.949575
+74 St-Broadway,Flushing,Q,40.746848,-73.891394
+Alabama Av,Jamaica,Bk,40.676992,-73.898654
+Bushwick Av-Aberdeen St,Canarsie,Bk,40.682829,-73.905249
+Union St,4th Av,Bk,40.677316,-73.98311
+Grand Central-42 St,Lexington Av,M,40.751776,-73.976848
+85 St-Forest Pkwy,Jamaica,Q,40.692435,-73.86001
+Lexington Av/63 St,63rd St,M,40.764629,-73.966113
+Whitehall St-South Ferry,Broadway,M,40.703087,-74.012994
+Simpson St,Lenox - White Plains Rd,Bx,40.824073,-73.893064
+New Lots Av,Canarsie,Bk,40.658733,-73.899232
+Allerton Av,Lenox - White Plains Rd,Bx,40.865462,-73.867352
+42 St-Bryant Pk,6th Av - Culver,M,40.754222,-73.984569
+Avenue U,6th Av - Culver,Bk,40.596063,-73.973357
+138 St-Grand Concourse,Jerome Av,Bx,40.813224,-73.929849
+20 Av,West End,Bk,40.604556,-73.998168
+Fort Hamilton Pkwy,West End,Bk,40.640914,-73.994304
+15 St-Prospect Park,6th Av - Culver,Bk,40.660365,-73.979493
+WTC Cortlandt,Broadway - 7Av,M,40.711835,-74.012188
+W 4 St-Wash Sq,6th Av - Culver,M,40.732338,-74.000495
+Greenpoint Av,Crosstown,Bk,40.731352,-73.954449
+Delancey St-Essex St,Jamaica,M,40.718315,-73.987437
+1 Av,Canarsie,M,40.730953,-73.981628
+Brighton Beach,Broadway - Brighton,Bk,40.577621,-73.961376
+42 St-Port Authority Bus Terminal,8th Av - Fulton St,M,40.757308,-73.989735
+30 Av,Astoria,Q,40.766779,-73.921479
+Mosholu Pkwy,Jerome Av,Bx,40.87975,-73.884655
+Far Rockaway-Mott Av,Rockaway,Q,40.603995,-73.755405
+6 Av,Canarsie,M,40.737335,-73.996786
+Pelham Bay Park,Pelham,Bx,40.852462,-73.828121
+Grand Central-42 St,Flushing,M,40.751431,-73.976041
+Hunts Point Av,Pelham,Bx,40.820948,-73.890549
+Grasmere,Staten Island,SI,40.603117,-74.084087
+Crescent St,Jamaica,Bk,40.683194,-73.873785
+111 St,Liberty Av,Q,40.684331,-73.832163
+175 St,8th Av - Fulton St,M,40.847391,-73.939704
+Marble Hill-225 St,Broadway - 7Av,M,40.874561,-73.909831
+86 St,Broadway - 7Av,M,40.788644,-73.976218
+225 St,Lenox - White Plains Rd,Bx,40.888022,-73.860341
+Elmhurst Av,Queens Blvd,Q,40.742454,-73.882017
+14 St-Union Sq,Lexington Av,M,40.734673,-73.989951
+145 St,Concourse,M,40.824783,-73.944216
+Parkside Av,Broadway - Brighton,Bk,40.655292,-73.961495
+Nostrand Av,Eastern Pky,Bk,40.669847,-73.950466
+Junction Blvd,Flushing,Q,40.749145,-73.869527
+86 St,4th Av,Bk,40.622687,-74.028398
+170 St,Jerome Av,Bx,40.840075,-73.917791
+3 Av-149 St,Lenox - White Plains Rd,Bx,40.816109,-73.917757
+207 St,Broadway - 7Av,M,40.864621,-73.918822
+59 St-Columbus Circle,Broadway - 7Av,M,40.768247,-73.981929
+Broad Channel,Rockaway,Q,40.608382,-73.815925
+Clinton-Washington Avs,8th Av - Fulton St,Bk,40.683263,-73.965838
+Ralph Av,8th Av - Fulton St,Bk,40.678822,-73.920786
+69 St,Flushing,Q,40.746325,-73.896403
+Bay 50 St,West End,Bk,40.588841,-73.983765
+Woodhaven Blvd,Queens Blvd,Q,40.733106,-73.869229
+Tottenville,Staten Island,SI,40.512764,-74.251961
+Broadway Junction,Jamaica,Bk,40.679498,-73.904512
+Myrtle-Wyckoff Avs,Canarsie,Bk,40.699814,-73.911586
+Queensboro Plaza,Astoria,Q,40.750582,-73.940202
+Lorimer St,Jamaica,Bk,40.703869,-73.947408
+Grant City,Staten Island,SI,40.578965,-74.109704
+Sutphin Blvd-Archer Av-JFK Airport,Queens - Archer,Q,40.700486,-73.807969
+33 St-Rawson St,Flushing,Q,40.744587,-73.930997
+Cathedral Pkwy (110 St),8th Av - Fulton St,M,40.800603,-73.958161
+Kew Gardens-Union Tpke,Queens Blvd,Q,40.714441,-73.831008
+23 St,Broadway - 7Av,M,40.744081,-73.995657
+Hoyt-Schermerhorn Sts,8th Av - Fulton St,Bk,40.688484,-73.985001
+14 St-Union Sq,Broadway - Brighton,M,40.735736,-73.990568
+135 St,Lenox - White Plains Rd,M,40.814229,-73.94077
+20 Av,Sea Beach,Bk,40.61741,-73.985026
+190 St,8th Av - Fulton St,M,40.859022,-73.93418
+Clinton-Washington Avs,Crosstown,Bk,40.688089,-73.966839
+E 143 St-St Mary's St,Pelham,Bx,40.808719,-73.907657
+Halsey St,Jamaica,Bk,40.68637,-73.916559
+Grand St,6th Av - Culver,M,40.718267,-73.993753
+86 St,Sea Beach,Bk,40.592721,-73.97823
+Saratoga Av,Eastern Pky,Bk,40.661453,-73.916327
+Great Kills,Staten Island,SI,40.551231,-74.151399
+Borough Hall,Clark St,Bk,40.693219,-73.989998
+Seneca Av,Myrtle Av,Q,40.702762,-73.90774
+Rockaway Park-Beach 116 St,Rockaway,Q,40.580903,-73.835592
+Montrose Av,Canarsie,Bk,40.707739,-73.93985
+167 St,Concourse,Bx,40.833771,-73.91844
+New Lots Av,Eastern Pky,Bk,40.666235,-73.884079
+Pleasant Plains,Staten Island,SI,40.52241,-74.217847
+Baychester Av,Dyre Av,Bx,40.878663,-73.838591
+Myrtle-Willoughby Avs,Crosstown,Bk,40.694568,-73.949046
+174 St,Lenox - White Plains Rd,Bx,40.837288,-73.887734
+Court Sq-23 St,Queens Blvd,Q,40.747846,-73.946
+Fordham Rd,Jerome Av,Bx,40.862803,-73.901034
+81 St-Museum of Natural History,8th Av - Fulton St,M,40.781433,-73.972143
+St George,Staten Island,SI,40.643748,-74.073643
+Canal St,Manhattan Bridge,M,40.718383,-74.00046
+Van Siclen Av,8th Av - Fulton St,Bk,40.67271,-73.890358
+157 St,Broadway - 7Av,M,40.834041,-73.94489
+Middletown Rd,Pelham,Bx,40.843863,-73.836322
+Prospect Av,4th Av,Bk,40.665414,-73.992872
+World Trade Center,8th Av - Fulton St,M,40.712582,-74.009781
+Park Pl,Franklin Shuttle,Bk,40.674772,-73.957624
+Newkirk Plaza,Broadway - Brighton,Bk,40.635082,-73.962793
+Steinway St,Queens Blvd,Q,40.756879,-73.92074
+Parsons Blvd,Queens Blvd,Q,40.707564,-73.803326
+Christopher St-Stonewall,Broadway - 7Av,M,40.733422,-74.002906
+Bowling Green,Lexington Av,M,40.704817,-74.014065
+St Lawrence Av,Pelham,Bx,40.831509,-73.867618
+125 St,Broadway - 7Av,M,40.815581,-73.958372
+Lexington Av/59 St,Astoria,M,40.76266,-73.967258
+York St,6th Av - Culver,Bk,40.701397,-73.986751
+Avenue I,6th Av - Culver,Bk,40.625322,-73.976127
+55 St,West End,Bk,40.631435,-73.995476
+Beach 36 St,Rockaway,Q,40.595398,-73.768175
+Broad St,Jamaica,M,40.706476,-74.011056
+96 St,Lexington Av,M,40.785672,-73.95107
+34 St-Herald Sq,Broadway - Brighton,M,40.749567,-73.98795
+Grand Central-42 St,Lexington - Shuttle,M,40.752769,-73.979189
+South Ferry,Broadway - 7Av,M,40.702068,-74.013664
+182-183 Sts,Concourse,Bx,40.856093,-73.900741
+Brooklyn Bridge-City Hall,Lexington Av,M,40.713065,-74.004131
+135 St,8th Av - Fulton St,M,40.817894,-73.947649
+Pelham Pkwy,Lenox - White Plains Rd,Bx,40.857192,-73.867615
+Bay Pkwy,Sea Beach,Bk,40.611815,-73.981848
+125 St,Lenox - White Plains Rd,M,40.807754,-73.945495
+50 St,West End,Bk,40.63626,-73.994791
+Bay Ridge-95 St,4th Av,Bk,40.616622,-74.030876
+Nassau Av,Crosstown,Bk,40.724635,-73.951277
+Spring St,8th Av - Fulton St,M,40.726227,-74.003739
+Mt Eden Av,Jerome Av,Bx,40.844434,-73.914685
+168 St,8th Av - Fulton St,M,40.840719,-73.939561
+Jamaica Center-Parsons/Archer,Queens - Archer,Q,40.702147,-73.801109
+Dyckman St,Broadway - 7Av,M,40.860531,-73.925536
+53 St,4th Av,Bk,40.645069,-74.014034
+80 St,Liberty Av,Q,40.679371,-73.858992
+Rockaway Av,8th Av - Fulton St,Bk,40.67834,-73.911946
+Jackson Hts-Roosevelt Av,Queens Blvd,Q,40.746644,-73.891338
+Kings Hwy,Broadway - Brighton,Bk,40.60867,-73.957734
+86 St,Lexington Av,M,40.779492,-73.955589
+Astoria Blvd,Astoria,Q,40.770258,-73.917843
+Freeman St,Lenox - White Plains Rd,Bx,40.829993,-73.891865
+Norwood-205 St,Concourse,Bx,40.874811,-73.878855
+103 St-Corona Plaza,Flushing,Q,40.749865,-73.8627
+Winthrop St,Nostrand,Bk,40.656652,-73.9502
+4 Av-9 St,6th Av - Culver,Bk,40.670272,-73.989779
+Fort Hamilton Pkwy,6th Av - Culver,Bk,40.650782,-73.975776
+Avenue X,6th Av - Culver,Bk,40.58962,-73.97425
+233 St,Lenox - White Plains Rd,Bx,40.893193,-73.857473
+DeKalb Av,Canarsie,Bk,40.703811,-73.918425
+East 105 St,Canarsie,Bk,40.650573,-73.899485
+Vernon Blvd-Jackson Av,Flushing,Q,40.742626,-73.953581
+125 St,Lexington Av,M,40.804138,-73.937594
+Jefferson Av,Staten Island,SI,40.583591,-74.103338
+Chambers St,Broadway - 7Av,M,40.715478,-74.009266
+Ozone Park-Lefferts Blvd,Liberty Av,Q,40.685951,-73.825798
+18 Av,West End,Bk,40.607954,-74.001736
+Bowery,Jamaica,M,40.72028,-73.993915
+4 Av-9 St,4th Av,Bk,40.670847,-73.988302
+Franklin Av-Medgar Evers College,Eastern Pky,Bk,40.670682,-73.958131
+Astor Pl,Lexington Av,M,40.730054,-73.99107
+Church Av,Broadway - Brighton,Bk,40.650527,-73.962982
+Court St,Broadway,Bk,40.6941,-73.991777
+Chauncey St,Jamaica,Bk,40.682893,-73.910456
+61 St-Woodside,Flushing,Q,40.74563,-73.902984
+Ocean Pkwy,Broadway - Brighton,Bk,40.576312,-73.968501
+Norwood Av,Jamaica,Bk,40.68141,-73.880039
+Broadway Junction,Canarsie,Bk,40.678856,-73.90324
+231 St,Broadway - 7Av,Bx,40.878856,-73.904834
+63 Dr-Rego Park,Queens Blvd,Q,40.729846,-73.861604
+34 St-Penn Station,8th Av - Fulton St,M,40.752287,-73.993391
+Beach 90 St,Rockaway,Q,40.588034,-73.813641
+50 St,Broadway - 7Av,M,40.761728,-73.983849
+96 St,Broadway - 7Av,M,40.793919,-73.972323
+Franklin Av,8th Av - Fulton St,Bk,40.68138,-73.956848
+51 St,Lexington Av,M,40.757107,-73.97192
+8 Av,Sea Beach,Bk,40.635064,-74.011719
+Richmond Valley,Staten Island,SI,40.519631,-74.229141
+Atlantic Av-Barclays Ctr,Eastern Pky,Bk,40.684359,-73.977666
+Flatbush Av-Brooklyn College,Nostrand,Bk,40.632836,-73.947642
+Woodlawn,Jerome Av,Bx,40.886037,-73.878751
+34 St-Herald Sq,6th Av - Culver,M,40.749719,-73.987823
+Morris Park,Dyre Av,Bx,40.854364,-73.860495
+8 Av,Canarsie,M,40.739777,-74.002578
+Queensboro Plaza,Flushing,Q,40.750582,-73.940202
+Whitlock Av,Pelham,Bx,40.826525,-73.886283
+Flushing Av,Jamaica,Bk,40.70026,-73.941126
+Clifton,Staten Island,SI,40.621319,-74.071402
+Park Place,Clark St,M,40.713051,-74.008811
+Jackson Av,Lenox - White Plains Rd,Bx,40.81649,-73.907807
+Tremont Av,Concourse,Bx,40.85041,-73.905227
+Bedford Av,Canarsie,Bk,40.717304,-73.956872
+Roosevelt Island,63rd St,M,40.759145,-73.95326
+Woodhaven Blvd,Jamaica,Q,40.693879,-73.851576
+Eltingville,Staten Island,SI,40.544601,-74.16457
+2 Av,6th Av - Culver,M,40.723402,-73.989938
+Rockaway Av,Eastern Pky,Bk,40.662549,-73.908946

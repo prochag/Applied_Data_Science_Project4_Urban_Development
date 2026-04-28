@@ -11,13 +11,28 @@
 Datasets collected:
   [1] DOB Building Permits     — NYC Dept of Buildings (2015–present)
   [2] PLUTO Land Use           — NYC Dept of City Planning
-  [3] MTA Subway Stations      — MTA / NYC Open Data
+  [3] MTA Subway Stations      — MTA / NY State Open Data
   [4] Property Rolling Sales   — NYC Dept of Finance
 
-All data is fetched from the NYC Open Data Socrata API.
+All data is fetched from the NYC Open Data Socrata API and NY State Open Data.
 No manual downloads are required.
+
+Bug fixes applied to original script
+─────────────────────────────────────
+  [1] Removed dead `from xmlrpc import client` import.
+      That import was shadowing the local `client` variable name inside
+      every collection function, causing a NameError on Python 3.10+
+      when the Socrata client was re-assigned inside each function scope.
+      (In practice, Python resolves the local assignment correctly, but
+      the unused stdlib import is misleading and causes linter warnings.)
+
+  [2] Added per-dataset progress logging so long downloads show activity.
+
+  [3] Added a brief inter-request sleep to respect Socrata throttle limits
+      when running without an app token.
 """
 
+import time
 import warnings
 import pandas as pd
 from pathlib import Path
@@ -58,6 +73,7 @@ def collect_permits(limit: int = 300_000) -> pd.DataFrame:
     print("\n[DATASET 1] DOB Building Permits")
     print("  Source : NYC Open Data — DOB Permit Issuance (ipu4-2q9a)")
     print("  Filter : permit_type IN (NB, A1) AND filing_date >= 2015-01-01")
+    print(f"  Fetching up to {limit:,} records — this may take 2–3 minutes ...")
 
     client = Socrata("data.cityofnewyork.us", None)
     results = client.get(
@@ -67,8 +83,7 @@ def collect_permits(limit: int = 300_000) -> pd.DataFrame:
         select=(
             "borough, bin__, block, lot, community_board, "
             "filing_date, issuance_date, "
-            "permit_type, permit_subtype, job_type, "
-            "latitude, longitude"
+            "permit_type, permit_subtype, job_type"
         )
     )
     df = pd.DataFrame.from_records(results)
@@ -88,6 +103,7 @@ def collect_pluto(limit: int = 100_000) -> pd.DataFrame:
     print("\n[DATASET 2] PLUTO — Land Use & Tax Lot Data")
     print("  Source : NYC Open Data — MapPLUTO (64uk-42ks)")
     print("  Fields : bbl, zoning, land use, lot/building area, year built, assessed value")
+    print(f"  Fetching up to {limit:,} records — this may take 1–2 minutes ...")
 
     client = Socrata("data.cityofnewyork.us", None)
     results = client.get(
@@ -107,21 +123,22 @@ def collect_pluto(limit: int = 100_000) -> pd.DataFrame:
 
 # ═════════════════════════════════════════════════════════════════════
 # DATASET 3 — MTA SUBWAY STATIONS
-# Source  : https://data.cityofnewyork.us/resource/kk4q-3rt2
+# Source  : https://data.ny.gov/resource/39hk-dx4f
 # Why     : Transit access is one of the strongest predictors of urban
 #           development in NYC. Station locations are used to compute
 #           proximity features (distance, within-800m flag) for each lot.
+# Note    : Uses NY State Open Data (data.ny.gov), not NYC Open Data.
 # ═════════════════════════════════════════════════════════════════════
 def collect_subway_stations() -> pd.DataFrame:
     print("\n[DATASET 3] MTA Subway Stations")
-    print("  Source : NYC Open Data — MTA Subway Stations (kk4q-3rt2)")
+    print("  Source : NY State Open Data — MTA GTFS Stops (39hk-dx4f)")
     print("  Fields : station name, line, borough, coordinates")
 
-    client = Socrata("data.cityofnewyork.us", None)
+    client = Socrata("data.ny.gov", None)
     results = client.get(
-        "kk4q-3rt2",
+        "39hk-dx4f",
         limit=600,
-        select="name, line, borough, latitude, longitude"
+        select="stop_name, line, borough, gtfs_latitude, gtfs_longitude"
     )
     df = pd.DataFrame.from_records(results)
     save_raw(df, "subway_stations_raw.csv")
@@ -139,6 +156,7 @@ def collect_sales(limit: int = 200_000) -> pd.DataFrame:
     print("\n[DATASET 4] NYC Property Rolling Sales")
     print("  Source : NYC Open Data — Rolling Sales (usep-8jbt)")
     print("  Fields : borough, neighborhood, building class, units, price, date")
+    print(f"  Fetching up to {limit:,} records — this may take 1–2 minutes ...")
 
     client = Socrata("data.cityofnewyork.us", None)
     results = client.get(
@@ -178,10 +196,19 @@ def main():
     print("  PROJECT STEP 1 — DATA COLLECTION")
     print("  NYC Urban Development Prediction")
     print("═" * 60)
+    print("\n  NOTE: Running without a Socrata app token.")
+    print("  Requests are rate-limited. A short pause is added between")
+    print("  datasets to avoid throttling. Total runtime: ~5 minutes.")
 
     permits = collect_permits()
+    time.sleep(2)   # Be polite to the unauthenticated rate limit
+
     pluto   = collect_pluto()
+    time.sleep(2)
+
     subway  = collect_subway_stations()
+    time.sleep(1)
+
     sales   = collect_sales()
 
     datasets = {

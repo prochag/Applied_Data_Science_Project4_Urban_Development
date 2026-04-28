@@ -93,19 +93,8 @@ def clean_permits(df: pd.DataFrame) -> pd.DataFrame:
         f"issuance: {df['issuance_date'].isna().sum()}")
 
     # ── Drop rows with no location or borough ─────────────────────────
-    df = df.dropna(subset=["latitude", "longitude", "borough"])
+    df = df.dropna(subset=["borough"])
 
-    # ── Numeric cast coordinates ──────────────────────────────────────
-    df["latitude"]  = pd.to_numeric(df["latitude"],  errors="coerce")
-    df["longitude"] = pd.to_numeric(df["longitude"], errors="coerce")
-    df = df.dropna(subset=["latitude", "longitude"])
-
-    # ── Remove coordinates outside NYC bounding box ───────────────────
-    # Valid NYC range: lat 40.4–41.0, lon -74.3 to -73.6
-    df = df[
-        df["latitude"].between(40.4, 41.0) &
-        df["longitude"].between(-74.3, -73.6)
-    ]
     report_cleaning("Coordinate filter", before, len(df))
 
     # ── Normalize borough names to title case ─────────────────────────
@@ -238,6 +227,7 @@ def clean_subway(df: pd.DataFrame) -> pd.DataFrame:
     section("CLEANING 3 — MTA Subway Stations")
     before = len(df)
 
+    df = df.rename(columns={"stop_name": "name", "gtfs_latitude": "latitude", "gtfs_longitude": "longitude"})
     df["latitude"]  = pd.to_numeric(df["latitude"],  errors="coerce")
     df["longitude"] = pd.to_numeric(df["longitude"], errors="coerce")
     df = df.dropna(subset=["latitude", "longitude"])

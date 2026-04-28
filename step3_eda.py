@@ -23,6 +23,22 @@ EDA Sections:
   [3.7] Property Price Signals
   [3.8] Correlation Heatmap
   [3.9] Unsupervised Learning — KMeans Neighborhood Clustering
+
+Bug fixes applied to original script
+─────────────────────────────────────
+  [1] resample("M") → resample("ME")
+      pandas ≥ 2.2 deprecated the "M" (month-end) alias. Using it raises
+      a ValueError at runtime. The correct alias is "ME".
+
+  [2] Missing `within_800m_subway` column in final dataset
+      Section 3.6 groups on `within_800m_subway` (expected: 0/1 binary),
+      but step2 aggregates the lot-level flag to `pct_within_800m_subway`
+      (a 0–1 proportion) in the final community-board table. The column
+      `within_800m_subway` therefore does not exist in the final CSV,
+      causing a KeyError. Fixed by deriving the binary flag in load_data()
+      using a majority-of-lots rule: a district is classified as a
+      Transit-Oriented Development (TOD) zone if > 50 % of its lots fall
+      within 800 m of a subway station.
 """
 
 import warnings
@@ -89,6 +105,14 @@ def load_data():
     # Parse dates
     permits["filing_date"] = pd.to_datetime(permits["filing_date"], errors="coerce")
     sales["sale_date"]     = pd.to_datetime(sales["sale_date"],     errors="coerce")
+
+    # FIX [2]: Derive the binary TOD flag that section 3.6 expects.
+    # step2 aggregates the lot-level within_800m_subway flag to a proportion
+    # (pct_within_800m_subway) when rolling up to community-board level.
+    # We recover the binary district-level flag here using a majority rule:
+    # a district is a TOD zone if > 50 % of its lots are within 800 m.
+    if "within_800m_subway" not in final.columns and "pct_within_800m_subway" in final.columns:
+        final["within_800m_subway"] = (final["pct_within_800m_subway"] > 0.5).astype(float)
 
     print(f"  Final dataset  : {final.shape[0]:,} rows × {final.shape[1]} features")
     print(f"  Permits        : {len(permits):,} rows")
@@ -177,11 +201,12 @@ def eda_permit_trends(permits_df: pd.DataFrame):
     section("3.3", "Permit Trends Over Time")
 
     # Monthly citywide permit volume
+    # FIX [1]: Use "ME" instead of deprecated "M" (pandas >= 2.2)
     monthly = (
         permits_df
         .dropna(subset=["filing_date"])
         .set_index("filing_date")
-        .resample("M")["permit_type"]
+        .resample("ME")["permit_type"]   # <-- was "M", now "ME"
         .count()
         .reset_index()
         .rename(columns={"permit_type": "count", "filing_date": "month"})
@@ -337,14 +362,8 @@ def eda_transit(df: pd.DataFrame):
     axes[0].set_xlabel("Distance to Subway")
     axes[0].set_ylabel("Avg Total Permits")
 
-    # High development rate by TOD flag
+    # FIX [2]: `within_800m_subway` is now guaranteed to exist (derived in load_data)
     tod_agg = df.groupby("within_800m_subway")["high_development"].mean().reset_index()
-    tod_agg["label"] = tod_agg["within_800m_subway"].map({
-        0.0: "Outside 800m\n(Non-TOD)",
-        1.0: "Within 800m\n(TOD Zone)"
-    })
-    # Handle case where column may be averaged (float between 0-1)
-    # Map to nearest integer for label lookup
     tod_agg["label"] = tod_agg["within_800m_subway"].round().map({
         0: "Outside 800m\n(Non-TOD)",
         1: "Within 800m\n(TOD Zone)"

@@ -1,9 +1,20 @@
-venv/
+# Python
 __pycache__/
-*.pyc
+*.py[cod]
+*.egg-info/
+dist/
+build/
+venv/
+.env
+
+# Jupyter
 .ipynb_checkpoints/
-data/raw/
-data/processed/
-data/final/
-outputs/
+
+# OS
 .DS_Store
+Thumbs.db
+
+# NOTE: data/ and outputs/ are intentionally committed to this repository.
+# Run the pipeline once locally (see run_pipeline.sh) to generate all files,
+# then commit everything. Teammates can then use the data directly without
+# needing to re-run Steps 1–3.
