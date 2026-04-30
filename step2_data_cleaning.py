@@ -166,6 +166,20 @@ def clean_pluto(df: pd.DataFrame) -> pd.DataFrame:
         df["longitude"].between(-74.3, -73.6)
     ]
 
+    # ── Normalize borough names to title case (PLUTO uses borough codes)
+    borough_map = {
+        "MANHATTAN": "Manhattan", "MN": "Manhattan",
+        "BROOKLYN":  "Brooklyn",  "BK": "Brooklyn",
+        "QUEENS":    "Queens",    "QN": "Queens",
+        "BRONX":     "Bronx",     "BX": "Bronx",
+        "STATEN ISLAND": "Staten Island", "SI": "Staten Island",
+    }
+    df["borough"] = (
+        df["borough"].astype(str).str.upper().str.strip()
+        .map(borough_map)
+        .fillna(df["borough"])
+    )
+
     # ── Land use labels ───────────────────────────────────────────────
     # NYC standard land use codes (01–11)
     landuse_map = {
@@ -271,6 +285,7 @@ def clean_sales(df: pd.DataFrame) -> pd.DataFrame:
 
     # ── Normalize borough codes ───────────────────────────────────────
     # Finance data uses numeric codes: 1=Manhattan, 2=Bronx, etc.
+    df["borough"] = df["borough"].astype(float).astype(int).astype(str)  # normalizes "1.0" → "1"
     borough_map = {
         "1": "Manhattan", "2": "Bronx",   "3": "Brooklyn",
         "4": "Queens",    "5": "Staten Island"
@@ -285,6 +300,10 @@ def clean_sales(df: pd.DataFrame) -> pd.DataFrame:
     )
 
     report_cleaning("Total sales", before, len(df))
+    valid = {"Manhattan", "Bronx", "Brooklyn", "Queens", "Staten Island"}
+    unmapped = set(df["borough"].dropna().unique()) - valid
+    if unmapped:
+        raise ValueError(f"Unmapped borough values in sales: {unmapped}")
     save_processed(df, "sales_clean.csv")
     return df
 
@@ -439,9 +458,15 @@ def build_final_dataset(
         .rename(columns={"cd": "community_board"})
     )
 
-    # Normalize join key
-    pluto_agg["community_board"]    = pluto_agg["community_board"].astype(str).str.strip()
-    permits_agg["community_board"]  = permits_agg["community_board"].astype(str).str.strip()
+    # Normalize join key to full 3-digit community district codes
+    pluto_agg["community_board"] = (
+        pluto_agg["community_board"].astype('Int64')
+        .astype(str).str.zfill(3)
+    )
+    permits_agg["community_board"] = (
+        permits_agg["community_board"].astype('Int64')
+        .astype(str).str.zfill(3)
+    )
 
     # ── Sales: roll up to borough × year (broadest reliable join key) ─
     sales_borough = (
@@ -456,9 +481,29 @@ def build_final_dataset(
         .rename(columns={"sale_year": "permit_year"})
     )
 
+    sales_latest = (
+        sales_borough
+        .sort_values(["borough", "permit_year"])
+        .groupby("borough", as_index=False)
+        .last()
+        .drop(columns=["permit_year"])
+        .set_index("borough")
+    )
+
     # ── Merge all datasets ────────────────────────────────────────────
     df = permits_agg.merge(pluto_agg,    on=["borough", "community_board"], how="left")
     df = df.merge(sales_borough,         on=["borough", "permit_year"],     how="left")
+
+    # Fill sales columns from the most recent borough-level year when no exact
+    # permit-year match exists. This ensures sales metrics are populated even
+    # when raw sales data is only available for a different year range.
+    for col in [
+        "borough_median_price",
+        "borough_price_appreciation",
+        "borough_num_sales",
+    ]:
+        if col in df.columns:
+            df[col] = df[col].fillna(df["borough"].map(sales_latest[col]))
 
     # ── Define target variable ────────────────────────────────────────
     # 'high_development' = 1 if district's permit count is in the top
@@ -474,13 +519,29 @@ def build_final_dataset(
 
     # ── Final imputation ──────────────────────────────────────────────
     df = df.dropna(subset=["borough", "community_board"])
+    null_counts = df.isnull().sum()
+    null_counts = null_counts[null_counts > 0]
+    if len(null_counts):
+        log("WARNING — nulls before imputation (likely broken joins):")
+        log(null_counts.to_string())
     df.replace([np.inf, -np.inf], np.nan, inplace=True)
 
-    numeric_cols = df.select_dtypes(include=[np.number]).columns
+    # Impute expected numeric features from merged datasets, but preserve
+    # sales metrics as NaN if there is no valid borough-year match.
+    numeric_cols = [
+        "total_permits", "new_buildings", "major_alterations",
+        "avg_approval_lag", "permit_growth_yoy", "permits_3yr_avg",
+        "avg_lot_area", "avg_bldg_area", "avg_floors", "avg_building_age",
+        "pct_vacant", "avg_assessed_value", "avg_value_per_sqft",
+        "avg_far_proxy", "avg_dist_to_subway_m", "pct_within_800m_subway",
+        "num_lots"
+    ]
     for col in numeric_cols:
-        df[col] = df[col].fillna(df[col].median())
+        if col in df.columns:
+            df[col] = df[col].fillna(df[col].median())
 
-    df.fillna(0, inplace=True)
+    # Leave borough-level sales metrics as NaN when no matching sales year exists.
+    df["permit_year"] = df["permit_year"].astype(int)
 
     # ── Save ──────────────────────────────────────────────────────────
     out_path = FINAL_DIR / "nyc_urban_features.csv"

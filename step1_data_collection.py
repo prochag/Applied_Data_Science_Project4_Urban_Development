@@ -79,6 +79,7 @@ def collect_permits(limit: int = 300_000) -> pd.DataFrame:
     results = client.get(
         "ipu4-2q9a",
         where="filing_date >= '2015-01-01' AND permit_type IN ('NB', 'A1')",
+        order="filing_date DESC",
         limit=limit,
         select=(
             "borough, bin__, block, lot, community_board, "
@@ -161,7 +162,8 @@ def collect_sales(limit: int = 200_000) -> pd.DataFrame:
     client = Socrata("data.cityofnewyork.us", None)
     results = client.get(
         "usep-8jbt",
-        limit=limit,
+        order="sale_date DESC",
+        limit=250_000,
         select=(
             "borough, neighborhood, building_class_category, "
             "tax_class_at_present, block, lot, zip_code, "
