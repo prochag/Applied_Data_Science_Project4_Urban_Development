@@ -174,6 +174,107 @@ Runs 9 EDA sections and saves all outputs to `outputs/eda/`:
 | 3.8 | Correlation heatmap of all numeric features vs. target |
 | 3.9 | KMeans clustering (K=4) — elbow/silhouette selection, PCA visualization, cluster profiles |
 
+### Step 4 — Modeling (`step5_model_training.py`)
+
+Trains and compares supervised machine learning models to predict **high development areas**
+using the final dataset (`data/final/nyc_urban_features.csv`).
+
+The modeling stage is designed to balance **predictive performance** and **interpretability**, 
+while carefully avoiding data leakage from target-defining variables.
+
+---
+Goal:
+
+- Identify which neighborhoods are most likely to experience high development activity  
+- Understand the structural, spatial, and economic drivers of urban growth  
+
+---
+
+#### Feature Strategy
+
+Two feature configurations are used:
+
+**1. All Features (Upper-Bound Performance)**  
+Includes all engineered features, including permit-related variables:
+
+- `total_permits`
+- `new_buildings`
+- `major_alterations`
+- `permits_3yr_avg`
+
+These features are highly predictive but partially overlap with the target definition.
+
+---
+
+**2. No-Leakage Features (Primary Model)**  
+Removes direct permit-count variables to ensure a realistic prediction setting:
+
+- `total_permits`
+- `new_buildings`
+- `major_alterations`
+- `permits_3yr_avg`
+
+This version reflects how well development can be predicted from **independent signals**.
+
+---
+
+#### Models Used
+
+| Model | Purpose |
+|------|--------|
+| Logistic Regression | Baseline model with strong interpretability |
+| Random Forest | Captures nonlinear relationships and interactions |
+| XGBoost | High-performance boosting model for structured data |
+
+---
+
+#### Training Setup
+
+- Train/test split: **75% / 25%**
+- Stratified sampling to preserve class balance
+- Class imbalance handled with `class_weight="balanced"`
+- Feature scaling applied for Logistic Regression
+- 5-fold cross-validation for robustness
+
+---
+
+#### Evaluation Metrics
+
+Models are evaluated using:
+
+- Accuracy — overall correctness  
+- Precision — reliability of positive predictions  
+- Recall — ability to detect high-development areas  
+- F1 Score — balance between precision and recall  
+- ROC-AUC — overall classification performance across thresholds  
+
+---
+
+#### Key Findings
+
+- Models using all features achieve very high performance, but are partially driven by target leakage  
+- In the no-leakage setting, performance decreases but remains meaningful  
+- Logistic Regression provides the best balance of interpretability and performance  
+- Random Forest captures nonlinear effects but is slightly less stable in this dataset  
+- XGBoost (when included) provides strong predictive performance  
+
+---
+
+#### Feature Importance
+
+Top predictors of urban development include:
+
+- `permit_growth_yoy` (development momentum)
+- `avg_bldg_area` (building intensity)
+- `num_lots` (density)
+- `avg_assessed_value` (economic signal)
+- `pct_within_800m_subway` (transit accessibility)
+- `avg_building_age` (redevelopment potential)
+
+These results confirm that **development trends, land use intensity, and transit access**
+are the primary drivers of urban growth.
+
+
 ---
 
 ## Output — Feature Description
