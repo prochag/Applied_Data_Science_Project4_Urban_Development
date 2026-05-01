@@ -212,7 +212,7 @@ The final dataset (`data/final/nyc_urban_features.csv`) contains one row per
 |---|---|
 | Pablo Rocha Gomez | Step 1 & 2 — Data Collection & Cleaning |
 | Pablo Rocha Gomez | Step 3 — Exploratory Data Analysis |
-| [Name] | Step 4 & 5 — Modeling & Evaluation |
+| Zhengxuan Xiao | Step 4 & 5 — Modeling & Evaluation |
 | [Name] | Step 6 — Report & Presentation |
 
 ---
